@@ -6,13 +6,6 @@ const reverseString = (a) => {
   return a.split('').reverse().join('');
 };
 
-const calculator = {
-  add: (a, b) => a + b,
-  subtract: (a, b) => a - b,
-  multiply: (a, b) => a * b,
-  divide: (a, b) => a / b,
-};
-
 const caesarCipher = (message, key) => {
   if (key === 0) return message;
 
@@ -32,4 +25,25 @@ const caesarCipher = (message, key) => {
   return decryptMsg.replace(/W/g, '');
 };
 
-export { capitalize, reverseString, caesarCipher, calculator };
+const arrayAnalyzer = (a) => {
+  const arrayInfo = {}
+  if (a.length === 0) a
+
+  arrayInfo.average = a.reduce((a, b) => a + b, 0) / 2;
+  arrayInfo.min = Math.min(...a);
+  arrayInfo.max = Math.max(...a);
+  arrayInfo.length = a.length;
+
+  return arrayInfo;
+}
+
+const calculator = {
+  add: (a, b) => a + b,
+  subtract: (a, b) => a - b,
+  multiply: (a, b) => a * b,
+  divide: (a, b) => a / b,
+};
+
+console.log(arrayAnalyzer([1,2,3,4,5]))
+
+export { capitalize, reverseString, caesarCipher, arrayAnalyzer, calculator };
