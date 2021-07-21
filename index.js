@@ -1,10 +1,26 @@
+/**
+ * @param {String} a - String to be evaluated
+ * @returns {String} - unchanged sting to be evaluated
+ */
+
 const capitalize = (a) => {
   return a;
 };
 
+/**
+ * @param {String} a - String to be evaluated
+ * @returns {String} - Reverse of string passed in
+ */
+
 const reverseString = (a) => {
   return a.split('').reverse().join('');
 };
+
+/**
+ * @param {String} message - Message to be encrypted
+ * @param {Number} key - Number of shifts the cipher should work with
+ * @returns {String} - Decrypted form of the message passed in
+ */
 
 const caesarCipher = (message, key) => {
   if (key === 0) return message;
@@ -24,6 +40,11 @@ const caesarCipher = (message, key) => {
 
   return decryptMsg.replace(/W/g, '');
 };
+
+/**
+ * @param {Array} a - Array to be processed  
+ * @returns {Object} - Object containing staistics about the array passed in
+ */
 
 const arrayAnalyzer = (a) => {
   const arrayInfo = {}
