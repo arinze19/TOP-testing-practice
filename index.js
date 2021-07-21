@@ -38,7 +38,7 @@ const caesarCipher = (message, key) => {
     }
   }
 
-  return decryptMsg.replace(/W/g, '');
+  return decryptMsg;
 };
 
 /**
@@ -64,7 +64,5 @@ const calculator = {
   multiply: (a, b) => a * b,
   divide: (a, b) => a / b,
 };
-
-console.log(arrayAnalyzer([1,2,3,4,5]))
 
 export { capitalize, reverseString, caesarCipher, arrayAnalyzer, calculator };
